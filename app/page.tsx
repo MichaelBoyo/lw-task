@@ -1,19 +1,38 @@
 import { GraphData } from "@/components/graph-data";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { MAIN_CARDS_DATA, SECONDARY_CARDS_DATA } from "@/constants/dummy.data";
 import {
   ArrowRight,
   BarChart2,
+  CircleHelp,
   GanttChartSquare,
   Info,
   Repeat,
+  Search,
 } from "lucide-react";
 import Image from "next/image";
 
 const DashBoard = () => {
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 p-4">
+      <div className="bg-white flex justify-between items-center p-4">
+        <div>
+          <p className="font-bold text-[16px]">Good Evening</p>
+          <p className="text-xs text-slate-600">Monday 20 Sep, 2023</p>
+        </div>
+        <div className="flex items-center space-x-10">
+          <div className="relative">
+            <Search className="absolute top-[13px] left-2" size={14} />
+            <Input
+              placeholder="Search for clients & classes"
+              className="pl-8"
+            />
+          </div>
+          <CircleHelp size={20} />
+        </div>
+      </div>
       <div className="grid grid-cols-5 gap-4">
         <div className="col-span-4 space-y-4">
           <SectionOne />
