@@ -6,7 +6,7 @@ export const MAIN_CARDS_DATA = [
     color: "green",
   },
   {
-    title: "TAsk Compliance",
+    title: "Task Compliance",
     rating: "42%",
     growth: "+ 37.00%",
     color: "green",
