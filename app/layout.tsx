@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { SideBar } from "@/components/SideBar";
-import { NavBar } from "@/components/navbar";
+import { NavBar } from "@/components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +21,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <main className="flex justify-between p-4 ">
           <SideBar />
-          <div>
+          <div className="w-full">
             <NavBar />
-            {children}
+            <div className="bg-gray-50 p-4">{children}</div>
           </div>
         </main>
       </body>
