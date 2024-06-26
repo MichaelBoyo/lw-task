@@ -1,9 +1,15 @@
 import { GraphData } from "@/components/graph-data";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MAIN_CARDS_DATA, SECONDARY_CARDS_DATA } from "@/constants/dummy.data";
-import { GanttChartSquare } from "lucide-react";
+import {
+  ArrowRight,
+  BarChart2,
+  GanttChartSquare,
+  Info,
+  Repeat,
+} from "lucide-react";
 import Image from "next/image";
-import React from "react";
 
 const DashBoard = () => {
   return (
@@ -14,7 +20,7 @@ const DashBoard = () => {
           <SectionTwo />
           <GraphData />
         </div>
-        <div>
+        <div className="space-y-4">
           <Card className="bg-black text-white flex flex-col items-center space-y-4 py-6">
             <Image src="/Asset 3 1.png" height={300} width={100} alt="spiral" />
 
@@ -24,6 +30,57 @@ const DashBoard = () => {
             </div>
 
             <p>Coming Soon</p>
+          </Card>
+          <Card className="p-4">
+            <div className="flex justify-between items-center">
+              <p>Connected Devices</p>
+              <div className="flex space-x-4">
+                <Repeat />
+                <Info />
+              </div>
+            </div>
+            <p>choose a wearable device</p>
+
+            <Image
+              src="/apple-watch.png"
+              height={400}
+              width={600}
+              alt="spiral"
+            />
+            <div className="flex">
+              <div>
+                <p>Apple Watches & 26 more devices</p>
+                <p className="text-sm">
+                  50% of your clients are connected to their device
+                </p>
+              </div>
+              <Button>
+                view all <ArrowRight />
+              </Button>
+            </div>
+          </Card>
+
+          <Card className="">
+            <div className="border-b">
+              <div className="flex justify-between items-center p-4">
+                <p>Steps</p>
+                <div className="flex space-x-4">
+                  <Repeat />
+                  <Info />
+                </div>
+              </div>
+              <p className="text-sm p-4">
+                27% client data usage was gathered this week
+              </p>
+            </div>
+            <div className="flex p-4">
+              <div>
+                <p>Walking Exercise</p>
+                <p>100,00,622 Steps</p>
+                <p>Keep pushing them to reach their goals!</p>
+              </div>
+              <BarChart2 />
+            </div>
           </Card>
         </div>
       </div>
