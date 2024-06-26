@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { MAIN_CARDS_DATA, SECONDARY_CARDS_DATA } from "@/constants/dummy.data";
 import {
   ArrowRight,
+  ArrowUp,
   BarChart,
   BarChart2,
   CircleHelp,
@@ -12,6 +13,7 @@ import {
   Info,
   Repeat,
   Search,
+  Triangle,
   Zap,
 } from "lucide-react";
 import Image from "next/image";
@@ -115,7 +117,7 @@ const SectionOne = () => {
   return (
     <div className="grid grid-cols-3 gap-4">
       {MAIN_CARDS_DATA.map((val, index) => (
-        <Card key={index} className="p-4">
+        <Card key={index} className="p-4 space-y-2">
           <Button
             size="icon"
             className="bg-slate-100 hover:bg-slate-100 cursor-text"
@@ -125,7 +127,13 @@ const SectionOne = () => {
           <div className="flex justify-between">
             <div className="space-y-2">
               <p className="text-slate-500 text-sm">{val.title}</p>
-              <p>{val.rating}</p>
+              <div className="flex items-center space-x-2">
+                <p className="text-xl font-bold">{val.rating}</p>
+                <div className="text-xs rounded-lg bg-[#D2FFE6] flex items-center p-1 space-x-1  ">
+                  <Triangle fill="black" size={6} />
+                  <p className="text-[#005E36]  font-semibold">{val.growth}</p>
+                </div>
+              </div>
             </div>
             <Button
               size="icon"
@@ -135,6 +143,14 @@ const SectionOne = () => {
             >
               <BarChart2 strokeWidth={3} />
             </Button>
+          </div>
+          <div className="bg-slate-200 h-1 rounded-lg">
+            <div
+              style={{
+                background: val.color,
+              }}
+              className="h-full w-1/3 rounded-lg"
+            />
           </div>
         </Card>
       ))}
