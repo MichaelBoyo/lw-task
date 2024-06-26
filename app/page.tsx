@@ -5,12 +5,14 @@ import { Input } from "@/components/ui/input";
 import { MAIN_CARDS_DATA, SECONDARY_CARDS_DATA } from "@/constants/dummy.data";
 import {
   ArrowRight,
+  BarChart,
   BarChart2,
   CircleHelp,
   GanttChartSquare,
   Info,
   Repeat,
   Search,
+  Zap,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -114,11 +116,26 @@ const SectionOne = () => {
     <div className="grid grid-cols-3 gap-4">
       {MAIN_CARDS_DATA.map((val, index) => (
         <Card key={index} className="p-4">
-          <div className="space-y-2">
-            <p>{val.title}</p>
-            <p>{val.rating}</p>
+          <Button
+            size="icon"
+            className="bg-slate-100 hover:bg-slate-100 cursor-text"
+          >
+            <Zap color="black" />
+          </Button>
+          <div className="flex justify-between">
+            <div className="space-y-2">
+              <p className="text-slate-500 text-sm">{val.title}</p>
+              <p>{val.rating}</p>
+            </div>
+            <Button
+              size="icon"
+              style={{
+                background: val.color,
+              }}
+            >
+              <BarChart2 strokeWidth={3} />
+            </Button>
           </div>
-          <GanttChartSquare />
         </Card>
       ))}
     </div>
