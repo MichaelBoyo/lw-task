@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="flex justify-between ">
+        <main className="flex justify-between p-4 ">
           <SideBar />
           <div>
             <NavBar />
