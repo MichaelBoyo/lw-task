@@ -1,3 +1,5 @@
+import { Calendar, User } from "lucide-react";
+
 export const MAIN_CARDS_DATA = [
   {
     title: "Workout Compliance",
@@ -16,5 +18,98 @@ export const MAIN_CARDS_DATA = [
     rating: "20 kg",
     growth: "+ 37.00%",
     color: "green",
+  },
+];
+
+export const SECONDARY_CARDS_DATA = [
+  {
+    title: "New Clients",
+    subTitle: "vs. previous month",
+    rating: "20",
+    growth: "+ 12.89%",
+    color: "green",
+    icon: User,
+    data: [
+      {
+        name: "Gay Hawkins",
+        image: "/hello.png",
+        time: "22 minutes ago",
+      },
+      {
+        name: "Gay Hawkins",
+        image: "/hello.png",
+        time: "22 minutes ago",
+      },
+      {
+        name: "Gay Hawkins",
+        image: "/hello.png",
+        time: "22 minutes ago",
+      },
+      {
+        name: "Gay Hawkins",
+        image: "/hello.png",
+        time: "22 minutes ago",
+      },
+    ],
+  },
+  {
+    title: "New Clients",
+    subTitle: "vs. previous month",
+    rating: "20",
+    growth: "+ 12.89%",
+    color: "green",
+    icon: User,
+    data: [
+      {
+        name: "Gay Hawkins",
+        image: "/hello.png",
+        time: "22 minutes ago",
+      },
+      {
+        name: "Gay Hawkins",
+        image: "/hello.png",
+        time: "22 minutes ago",
+      },
+      {
+        name: "Gay Hawkins",
+        image: "/hello.png",
+        time: "22 minutes ago",
+      },
+      {
+        name: "Gay Hawkins",
+        image: "/hello.png",
+        time: "22 minutes ago",
+      },
+    ],
+  },
+  {
+    title: "New Clients",
+    subTitle: "vs. previous month",
+    rating: "20",
+    growth: "+ 12.89%",
+    color: "green",
+    icon: Calendar,
+    data: [
+      {
+        name: "Gay Hawkins",
+        image: "/hello.png",
+        time: "22 minutes ago",
+      },
+      {
+        name: "Gay Hawkins",
+        image: "/hello.png",
+        time: "22 minutes ago",
+      },
+      {
+        name: "Gay Hawkins",
+        image: "/hello.png",
+        time: "22 minutes ago",
+      },
+      {
+        name: "Gay Hawkins",
+        image: "/hello.png",
+        time: "22 minutes ago",
+      },
+    ],
   },
 ];

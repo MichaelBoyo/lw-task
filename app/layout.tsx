@@ -23,7 +23,7 @@ export default function RootLayout({
           <SideBar />
           <div className="w-full">
             <NavBar />
-            <div className="bg-gray-50 p-4">{children}</div>
+            <div className="bg-gray-100 p-4">{children}</div>
           </div>
         </main>
       </body>
