@@ -12,7 +12,7 @@ import { AlignRight } from "lucide-react";
 import { defaultLinks } from "@/constants/nav";
 import { roboto } from "@/app/fonts";
 
-export default function Navbar() {
+export function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   return (
