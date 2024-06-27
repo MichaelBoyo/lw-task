@@ -42,13 +42,13 @@ const DashBoard = () => {
           <CircleHelp size={20} />
         </div>
       </div>
-      <div className="grid grid-cols-5 gap-4">
-        <div className="col-span-4 space-y-4">
+      <div className="flex gap-4">
+        <div className=" space-y-4">
           <SectionOne />
           <SectionTwo />
           <GraphData />
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 ">
           <Card className="bg-black text-white flex flex-col items-center space-y-4 py-6 min-h-[327px]">
             <Image src="/Asset 3 1.png" height={149} width={149} alt="spiral" />
 

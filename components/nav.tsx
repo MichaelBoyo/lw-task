@@ -49,7 +49,7 @@ export const Navbar = () => {
           </div>
         ) : null}
       </div>
-      <div className="hidden md:flex justify-end items-center space-x-6 p-2 py-4 border-b">
+      <div className="hidden md:flex justify-end items-center space-x-6 p-4 px-6 border-b">
         <div className="flex items-center">
           <Avatar>
             <AvatarImage src="/nav_user.png" alt="@shadcn" />
