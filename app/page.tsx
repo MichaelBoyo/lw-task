@@ -5,8 +5,6 @@ import { Input } from "@/components/ui/input";
 import { MAIN_CARDS_DATA, SECONDARY_CARDS_DATA } from "@/constants/dummy.data";
 import {
   ArrowRight,
-  ArrowUp,
-  BarChart,
   BarChart2,
   ChevronsRight,
   CircleHelp,
