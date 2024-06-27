@@ -144,13 +144,17 @@ const SectionOne = () => {
               <BarChart2 strokeWidth={3} />
             </Button>
           </div>
-          <div className="bg-slate-200 h-1 rounded-lg">
-            <div
-              style={{
-                background: val.color,
-              }}
-              className="h-full w-1/3 rounded-lg"
-            />
+          <div>
+            <p className=" text-right">40%</p>
+
+            <div className="bg-slate-200 h-1 rounded-lg">
+              <div
+                style={{
+                  background: val.color,
+                }}
+                className="h-full w-1/3 rounded-lg"
+              />
+            </div>
           </div>
           {val.sub ? (
             <div className="flex justify-between items-center">
