@@ -5,6 +5,7 @@ import { Info, MoreVertical, Repeat } from "lucide-react";
 import { Button } from "./ui/button";
 import { AreaChart, Area, CartesianGrid, XAxis, YAxis } from "recharts";
 import { cn } from "@/lib/utils";
+import { IconButton } from "./icon-button";
 const data = [
   { name: "Jan", w: 8, x: 12, y: 23, z: 122 },
   { name: "Feb", w: 8, x: 22, y: 3, z: 73 },
@@ -26,15 +27,9 @@ export const GraphData = () => {
       <div className="flex justify-between">
         <h1>Clients Performance Graph</h1>
         <div className="flex space-x-2">
-          <Button size="sm" className="bg-[#F7F8F9]">
-            <Info size={16} color="black" />
-          </Button>
-          <Button size="sm" className="bg-[#F7F8F9]">
-            <Repeat size={16} color="black" />
-          </Button>
-          <Button size="sm" className="bg-[#F7F8F9]">
-            <MoreVertical size={16} color="black" />
-          </Button>
+          <IconButton icon={Info} />
+          <IconButton icon={Repeat} />
+          <IconButton icon={MoreVertical} />
         </div>
       </div>
 

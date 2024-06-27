@@ -1,8 +1,13 @@
+import { ConnectedDevices } from "@/components/connected-devices";
+import { Devices } from "@/components/devices";
 import { GraphData } from "@/components/graph-data";
+import { IconButton } from "@/components/icon-button";
+import { Steps } from "@/components/steps";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { WalkingExercise } from "@/components/walking-exercise";
 import { MAIN_CARDS_DATA, SECONDARY_CARDS_DATA } from "@/constants/dummy.data";
 import {
   ArrowRight,
@@ -56,57 +61,19 @@ const DashBoard = () => {
 
             <p>Coming Soon</p>
           </Card>
+          <ConnectedDevices />
           <Card className="p-4">
-            <div className="flex justify-between items-center">
-              <p>Connected Devices</p>
-              <div className="flex space-x-4">
-                <Repeat />
-                <Info />
-              </div>
-            </div>
-            <p>choose a wearable device</p>
-
             <Image
               src="/apple-watch.png"
               height={400}
               width={600}
               alt="spiral"
             />
-            <div className="flex">
-              <div>
-                <p>Apple Watches & 26 more devices</p>
-                <p className="text-sm">
-                  50% of your clients are connected to their device
-                </p>
-              </div>
-              <Button>
-                view all <ArrowRight />
-              </Button>
-            </div>
           </Card>
+          <Devices />
 
-          <Card className="">
-            <div className="border-b">
-              <div className="flex justify-between items-center p-4">
-                <p>Steps</p>
-                <div className="flex space-x-4">
-                  <Repeat />
-                  <Info />
-                </div>
-              </div>
-              <p className="text-sm p-4">
-                27% client data usage was gathered this week
-              </p>
-            </div>
-            <div className="flex p-4">
-              <div>
-                <p>Walking Exercise</p>
-                <p>100,00,622 Steps</p>
-                <p>Keep pushing them to reach their goals!</p>
-              </div>
-              <BarChart2 />
-            </div>
-          </Card>
+          <Steps />
+          <WalkingExercise />
         </div>
       </div>
     </div>
@@ -120,19 +87,14 @@ const SectionOne = () => {
     <div className="grid grid-cols-3 gap-4">
       {MAIN_CARDS_DATA.map((val, index) => (
         <Card key={index} className="p-4 space-y-2">
-          <Button
-            size="icon"
-            className="bg-slate-100 hover:bg-slate-100 cursor-text"
-          >
-            <Zap color="black" />
-          </Button>
+          <IconButton icon={Zap} />
           <div className="flex justify-between">
             <div className="space-y-2">
               <p className="text-slate-500 text-sm">{val.title}</p>
               <div className="flex items-center space-x-2">
                 <p className="text-xl font-bold">{val.rating}</p>
-                <div className="text-xs rounded-lg bg-[#D2FFE6] flex items-center p-1 space-x-1  ">
-                  <Triangle fill="black" size={6} />
+                <div className="text-[6.95px] rounded-lg bg-[#D2FFE6] flex items-center p-1 space-x-1  ">
+                  <Triangle fill="black" size={4} />
                   <p className="text-[#005E36]  font-semibold">{val.growth}</p>
                 </div>
               </div>
@@ -178,11 +140,25 @@ const SectionTwo = () => {
     <div className="grid grid-cols-3 gap-4">
       {SECONDARY_CARDS_DATA.map((val, index) => (
         <Card key={index} className="p-4 space-y-2">
-          <div className="space-y-2">
-            <p>{val.title}</p>
-            <p>{val.rating}</p>
+          <div className="flex justify-between">
+            <p className="text-[#72777B] ">{val.title}</p>
+            <div
+              className=" p-1 rounded-md"
+              style={{
+                background: val.iconOneColor,
+              }}
+            >
+              {val.iconOne}
+            </div>
           </div>
-          <val.icon />
+          <div className="flex items-center space-x-2">
+            <p className="text-xl font-bold">{val.rating}</p>
+            <div className="text-[9.49px] rounded-lg bg-[#ECFDF5] flex items-center p-1 space-x-1  ">
+              <Triangle fill="black" size={6} />
+              <p className="text-[#005E36]  font-semibold">{val.growth}</p>
+            </div>
+          </div>
+
           <div className="space-y-2">
             {val.data.map((subData, id) => (
               <Card

@@ -1,4 +1,4 @@
-import { Calendar, User } from "lucide-react";
+import { BicepsFlexed, Calendar, User, Users } from "lucide-react";
 
 export const MAIN_CARDS_DATA = [
   {
@@ -27,9 +27,11 @@ export const SECONDARY_CARDS_DATA = [
     title: "New Clients",
     subTitle: "vs. previous month",
     rating: "20",
-    growth: "+ 12.89%",
+    growth: "12.89%",
     color: "green",
     icon: User,
+    iconOne: <Users color="#805F00" />,
+    iconOneColor: "#FEF8E6",
     data: [
       {
         name: "Gay Hawkins",
@@ -57,9 +59,11 @@ export const SECONDARY_CARDS_DATA = [
     title: "New Clients",
     subTitle: "vs. previous month",
     rating: "20",
-    growth: "+ 12.89%",
+    growth: "12.89%",
+    iconOne: <BicepsFlexed color="#006980" />,
     color: "green",
     icon: User,
+    iconOneColor: "#E5FAFF",
     data: [
       {
         name: "Gay Hawkins",
@@ -87,9 +91,11 @@ export const SECONDARY_CARDS_DATA = [
     title: "New Clients",
     subTitle: "vs. previous month",
     rating: "20",
-    growth: "+ 12.89%",
-    color: "green",
+    growth: "12.89%",
+    color: "#E8E6FE",
     icon: Calendar,
+    iconOne: <Calendar color="#0C027D" />,
+    iconOneColor: "#E8E6FE",
     data: [
       {
         name: "Gay Hawkins",
