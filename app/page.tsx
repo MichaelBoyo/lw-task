@@ -1,4 +1,5 @@
 import { GraphData } from "@/components/graph-data";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -10,6 +11,7 @@ import {
   CircleHelp,
   GanttChartSquare,
   Info,
+  MessageCircle,
   Repeat,
   Search,
   Triangle,
@@ -175,18 +177,38 @@ const SectionTwo = () => {
   return (
     <div className="grid grid-cols-3 gap-4">
       {SECONDARY_CARDS_DATA.map((val, index) => (
-        <Card key={index} className="p-4">
+        <Card key={index} className="p-4 space-y-2">
           <div className="space-y-2">
             <p>{val.title}</p>
             <p>{val.rating}</p>
           </div>
-          <GanttChartSquare />
-          <div>
+          <val.icon />
+          <div className="space-y-2">
             {val.data.map((subData, id) => (
-              <Card key={id}>
-                <p>{subData.name}</p>
+              <Card
+                key={id}
+                className="flex justify-between p-4 border-none bg-[#F8F7FF] items-center rounded-lg"
+              >
+                <div className="flex space-x-10">
+                  <Avatar>
+                    <AvatarImage src="/nav_user.png" alt="@shadcn" />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <p className="font-semibold">{subData.name}</p>
+                    <p>{subData.time}</p>
+                  </div>
+                </div>
+                <Button size="icon" className="rounded-full">
+                  <MessageCircle />
+                </Button>
               </Card>
             ))}
+          </div>
+          <div className="flex justify-end">
+            <Button>
+              View More <ChevronsRight />
+            </Button>
           </div>
         </Card>
       ))}
