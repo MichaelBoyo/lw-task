@@ -20,7 +20,7 @@ export default function RootLayout({
           <SideBar />
           <main className="flex-1 overflow-y-auto">
             <Navbar2 />
-            <div className="bg-muted">{children}</div>
+            <div className="bg-slate-50">{children}</div>
           </main>
         </div>
       </body>

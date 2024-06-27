@@ -4,6 +4,7 @@ import { Card } from "./ui/card";
 import { Info, MoreVertical, Repeat } from "lucide-react";
 import { Button } from "./ui/button";
 import { AreaChart, Area, CartesianGrid, XAxis, YAxis } from "recharts";
+import { cn } from "@/lib/utils";
 const data = [
   { name: "Jan", w: 8, x: 12, y: 23, z: 122 },
   { name: "Feb", w: 8, x: 22, y: 3, z: 73 },
@@ -21,19 +22,30 @@ const data = [
 
 export const GraphData = () => {
   return (
-    <Card className="p-4">
+    <Card className="p-4 space-y-4">
       <div className="flex justify-between">
         <h1>Clients Performance Graph</h1>
-        <div className="flex space-x-6">
-          <Info />
-          <Repeat />
-          <MoreVertical />
+        <div className="flex space-x-2">
+          <Button size="sm" className="bg-[#F7F8F9]">
+            <Info size={16} color="black" />
+          </Button>
+          <Button size="sm" className="bg-[#F7F8F9]">
+            <Repeat size={16} color="black" />
+          </Button>
+          <Button size="sm" className="bg-[#F7F8F9]">
+            <MoreVertical size={16} color="black" />
+          </Button>
         </div>
       </div>
 
-      <div className="flex space-x-2 w-full justify-between">
+      <div className="grid grid-cols-4 gap-2">
         {tabs.map((tab, i) => (
-          <Button key={i}>{tab}</Button>
+          <Button
+            className={cn(tab === "Sleep" ? "bg-[#323A46]" : "bg-[#E7EAEE]")}
+            key={i}
+          >
+            {tab}
+          </Button>
         ))}
       </div>
       <div className="flex space-x-6">
@@ -47,41 +59,44 @@ export const GraphData = () => {
           </div>
         ))}
       </div>
-      <AreaChart width={1200} height={400} data={data}>
-        <CartesianGrid />
-        <XAxis dataKey="name" />
-        <YAxis>kk</YAxis>
-        <Area
-          type="monotone"
-          dataKey="x"
-          stackId="1"
-          stroke="blue"
-          fill="#00C7F2"
-        />
-        <Area
-          type="monotone"
-          dataKey="y"
-          stackId="1"
-          stroke="green"
-          fill="#0FCA7A"
-        />
-        <Area
-          type="monotone"
-          dataKey="z"
-          stackId="2"
-          stroke="blue"
-          fill="#0E669D"
-        />
+      <div>
+        <AreaChart width={1285} height={400} data={data} className="-mx-8">
+          <CartesianGrid />
+          <XAxis dataKey="name" />
+          <YAxis>kk</YAxis>
+          <Area
+            type="monotone"
+            dataKey="x"
+            stackId="1"
+            stroke="blue"
+            fill="#00C7F2"
+          />
+          <Area
+            type="monotone"
+            dataKey="y"
+            stackId="1"
+            stroke="green"
+            fill="#0FCA7A"
+          />
+          <Area
+            type="monotone"
+            dataKey="z"
+            stackId="2"
+            stroke="blue"
+            // fill="#0E669D"
+            fill={chartsKeys[2].color}
+          />
 
-        <Area
-          type="monotone"
-          gradientTransform=""
-          dataKey="w"
-          stackId="2"
-          stroke="yellow"
-          fill="#FBC62F"
-        />
-      </AreaChart>
+          <Area
+            type="monotone"
+            gradientTransform=""
+            dataKey="w"
+            stackId="2"
+            fill={chartsKeys[0].color}
+            stroke="#FBC62F"
+          />
+        </AreaChart>
+      </div>
     </Card>
   );
 };
@@ -91,18 +106,18 @@ const tabs = ["Sleep", "Steps", "Weight", "Termerature"];
 const chartsKeys = [
   {
     name: "REM",
-    color: "yellow",
+    color: "#FFD700",
   },
   {
     name: "Light Sleep",
-    color: "yellow",
+    color: "#00C7F2",
   },
   {
     name: "Deep Sleep",
-    color: "green",
+    color: "#0E659D",
   },
   {
     name: "Awake",
-    color: "blue",
+    color: "#22AD7D",
   },
 ];
