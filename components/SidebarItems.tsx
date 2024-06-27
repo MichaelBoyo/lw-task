@@ -46,7 +46,9 @@ const SidebarLink = ({
     >
       <div className="flex items-center ">
         <link.icon fill={active ? "white" : ""} className="h-3.5 mr-1" />
-        <span className={cn(poppins.className, "font-bold")}>{link.title}</span>
+        <span className={cn(poppins.className, active ? "font-bold" : "")}>
+          {link.title}
+        </span>
       </div>
     </Link>
   );
