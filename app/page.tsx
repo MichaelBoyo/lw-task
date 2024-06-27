@@ -148,7 +148,7 @@ const SectionTwo = () => {
                 background: val.iconOneColor,
               }}
             >
-              {val.iconOne}
+              {val.icon}
             </div>
           </div>
           <div className="flex items-center space-x-2">

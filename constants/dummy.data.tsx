@@ -1,4 +1,6 @@
-import { BicepsFlexed, Calendar, User, Users } from "lucide-react";
+import { Calendar } from "@/components/icons/calendar";
+import { Muscle } from "@/components/icons/muscle";
+import { BicepsFlexed, Users, UsersIcon } from "lucide-react";
 
 export const MAIN_CARDS_DATA = [
   {
@@ -33,7 +35,7 @@ export const SECONDARY_CARDS_DATA = [
     rating: "20",
     growth: "12.89%",
     color: "#FBC62F",
-    icon: User,
+    icon: <UsersIcon />,
     iconOne: <Users color="#805F00" />,
     iconOneColor: "#FEF8E6",
     type: "icon",
@@ -72,7 +74,7 @@ export const SECONDARY_CARDS_DATA = [
     growth: "12.89%",
     iconOne: <BicepsFlexed color="#006980" />,
     color: "#00C7F2",
-    icon: User,
+    icon: <Muscle />,
     iconOneColor: "#E5FAFF",
     data: [
       {
@@ -108,8 +110,7 @@ export const SECONDARY_CARDS_DATA = [
     type: "checkbox",
     growth: "12.89%",
     color: "#695CFB",
-    icon: Calendar,
-    iconOne: <Calendar color="#0C027D" />,
+    icon: <Calendar />,
     iconOneColor: "#E8E6FE",
     data: [
       {
