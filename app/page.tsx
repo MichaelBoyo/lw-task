@@ -12,6 +12,7 @@ import { MAIN_CARDS_DATA, SECONDARY_CARDS_DATA } from "@/constants/dummy.data";
 import {
   ArrowRight,
   BarChart2,
+  Check,
   ChevronsRight,
   CircleHelp,
   GanttChartSquare,
@@ -192,9 +193,21 @@ const SectionTwo = () => {
                     <p>{subData.time}</p>
                   </div>
                 </div>
-                <Button size="icon" className="rounded-full">
-                  <MessageCircle />
-                </Button>
+                {val.type === "icon" ? (
+                  <Image
+                    src="/icons/message.svg"
+                    alt="message"
+                    height={24}
+                    width={24}
+                    quality={100}
+                  />
+                ) : val.type === "text" ? (
+                  <div className="p-1 px-2 bg-[#D2FFE6] rounded-md">
+                    <p className="text-[#005E36] text-xs">View class</p>
+                  </div>
+                ) : (
+                  <Check />
+                )}
               </Card>
             ))}
           </div>

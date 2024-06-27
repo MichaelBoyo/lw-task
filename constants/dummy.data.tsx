@@ -36,6 +36,7 @@ export const SECONDARY_CARDS_DATA = [
     icon: User,
     iconOne: <Users color="#805F00" />,
     iconOneColor: "#FEF8E6",
+    type: "icon",
     data: [
       {
         name: "Gay Hawkins",
@@ -67,6 +68,7 @@ export const SECONDARY_CARDS_DATA = [
       value: 78,
       color: "red",
     },
+    type: "text",
     growth: "12.89%",
     iconOne: <BicepsFlexed color="#006980" />,
     color: "#00C7F2",
@@ -103,6 +105,7 @@ export const SECONDARY_CARDS_DATA = [
       value: 90,
       color: "orange",
     },
+    type: "checkbox",
     growth: "12.89%",
     color: "#695CFB",
     icon: Calendar,
