@@ -6,6 +6,7 @@ import { Steps } from "@/components/steps";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { WalkingExercise } from "@/components/walking-exercise";
 import { MAIN_CARDS_DATA, SECONDARY_CARDS_DATA } from "@/constants/dummy.data";
@@ -85,12 +86,12 @@ export default DashBoard;
 
 const SectionOne = () => {
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-3 gap-3">
       {MAIN_CARDS_DATA.map((val, index) => (
-        <Card key={index} className="p-4 space-y-2">
+        <Card key={index} className="p-4 space-y-1">
           <IconButton icon={Zap} />
           <div className="flex justify-between">
-            <div className="space-y-2">
+            <div className="">
               <p className="text-slate-500 text-sm">{val.title}</p>
               <div className="flex items-center space-x-2">
                 <p className="text-xl font-bold">{val.rating}</p>
@@ -138,9 +139,9 @@ const SectionOne = () => {
 
 const SectionTwo = () => {
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-3 gap-3">
       {SECONDARY_CARDS_DATA.map((val, index) => (
-        <Card key={index} className="p-4 space-y-2">
+        <Card key={index} className="p-4 ">
           <div className="flex justify-between">
             <p className="text-[#72777B] text-[14px]">{val.title}</p>
             <div
@@ -177,11 +178,11 @@ const SectionTwo = () => {
             </div>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-2 py-2">
             {val.data.map((subData, id) => (
               <Card
                 key={id}
-                className="flex justify-between p-4 border-none bg-[#F8F7FF] items-center rounded-lg"
+                className="flex justify-between p-3 border-none bg-[#F8F7FF] items-center rounded-lg"
               >
                 <div className="flex space-x-10">
                   <Avatar>
@@ -189,8 +190,10 @@ const SectionTwo = () => {
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
                   <div>
-                    <p className="font-semibold">{subData.name}</p>
-                    <p>{subData.time}</p>
+                    <p className="font-semibold text-[#494949]">
+                      {subData.name}
+                    </p>
+                    <p className="text-[#757575] text-xs">{subData.time}</p>
                   </div>
                 </div>
                 {val.type === "icon" ? (
@@ -206,13 +209,16 @@ const SectionTwo = () => {
                     <p className="text-[#005E36] text-xs">View class</p>
                   </div>
                 ) : (
-                  <Check />
+                  <Checkbox
+                    checked={id % 2 == 0}
+                    className="data-[state=checked]:bg-[#4AD79B] border-slate-300 data-[state=checked]:border-[#4AD79B] rounded-md data-[state=checked]:border border-2 "
+                  />
                 )}
               </Card>
             ))}
           </div>
           <div className="flex justify-end">
-            <Button>
+            <Button className="bg-[#EFEEFF] text-[#695CFB]">
               View More <ChevronsRight />
             </Button>
           </div>

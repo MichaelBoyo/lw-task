@@ -39,29 +39,29 @@ export const SECONDARY_CARDS_DATA = [
     type: "icon",
     data: [
       {
-        name: "Gay Hawkins",
+        name: "Guy Hawkins",
         image: "/hello.png",
         time: "22 minutes ago",
       },
       {
-        name: "Gay Hawkins",
+        name: "Asta Majid",
         image: "/hello.png",
         time: "22 minutes ago",
       },
       {
-        name: "Gay Hawkins",
+        name: "Robert Fox",
         image: "/hello.png",
         time: "22 minutes ago",
       },
       {
-        name: "Gay Hawkins",
+        name: "Annette Black",
         image: "/hello.png",
         time: "22 minutes ago",
       },
     ],
   },
   {
-    title: "New Clients",
+    title: "Classes for Today",
     subTitle: "vs. previous month",
     rating: "20",
     total: {
@@ -76,30 +76,30 @@ export const SECONDARY_CARDS_DATA = [
     iconOneColor: "#E5FAFF",
     data: [
       {
-        name: "Gay Hawkins",
+        name: "Yoga Class",
         image: "/hello.png",
-        time: "22 minutes ago",
+        time: "60 minutes class",
       },
       {
-        name: "Gay Hawkins",
+        name: "Pilates Class",
         image: "/hello.png",
-        time: "22 minutes ago",
+        time: "60 minutes class",
       },
       {
-        name: "Gay Hawkins",
+        name: "Cycle Class",
         image: "/hello.png",
-        time: "22 minutes ago",
+        time: "60 minutes class",
       },
       {
-        name: "Gay Hawkins",
+        name: "Cardio Class",
         image: "/hello.png",
-        time: "22 minutes ago",
+        time: "60 minutes class",
       },
     ],
   },
   {
-    title: "New Clients",
-    subTitle: "vs. previous month",
+    title: "Appointments for Today",
+    subTitle: "vs. previous shift",
     rating: "20",
     total: {
       value: 90,
@@ -113,22 +113,22 @@ export const SECONDARY_CARDS_DATA = [
     iconOneColor: "#E8E6FE",
     data: [
       {
-        name: "Gay Hawkins",
+        name: "Guy Hawkins",
         image: "/hello.png",
         time: "22 minutes ago",
       },
       {
-        name: "Gay Hawkins",
+        name: "Asta Majid",
         image: "/hello.png",
         time: "22 minutes ago",
       },
       {
-        name: "Gay Hawkins",
+        name: "Robert Fox",
         image: "/hello.png",
         time: "22 minutes ago",
       },
       {
-        name: "Gay Hawkins",
+        name: "Annette Black",
         image: "/hello.png",
         time: "22 minutes ago",
       },
