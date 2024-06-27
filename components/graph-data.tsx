@@ -59,8 +59,13 @@ export const GraphData = () => {
           </div>
         ))}
       </div>
-      <div>
-        <AreaChart width={1285} height={400} data={data} className="-mx-8">
+      <div className="min-w-full">
+        <AreaChart
+          width={window.innerWidth - 650}
+          height={400}
+          data={data}
+          className=""
+        >
           <CartesianGrid />
           <XAxis dataKey="name" />
           <YAxis>kk</YAxis>

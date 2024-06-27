@@ -68,7 +68,7 @@ const DashBoard = () => {
           </Card>
           <ConnectedDevices />
 
-          <Image src="/apple-watch.png" height={400} width={600} alt="spiral" />
+          <Image src="/apple-watch.svg" height={400} width={600} alt="spiral" />
 
           <Devices />
 
@@ -188,7 +188,7 @@ const SectionTwo = () => {
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
                   <div>
-                    <p className="font-semibold text-[#494949]">
+                    <p className="font-semibold text-[#494949] text-[8.6px]">
                       {subData.name}
                     </p>
                     <p className="text-[#757575] text-xs">{subData.time}</p>

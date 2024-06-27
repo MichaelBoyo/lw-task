@@ -3,16 +3,15 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { LucideIcon } from "lucide-react";
-
 import { defaultLinks } from "@/constants/nav";
 import { poppins } from "@/app/fonts";
 import { cn } from "@/lib/utils";
+import { ReactNode } from "react";
 
 export interface SidebarLink {
   title: string;
   href: string;
-  icon: LucideIcon;
+  icon: ReactNode;
 }
 
 const SidebarItems = () => {
@@ -44,9 +43,15 @@ const SidebarLink = ({
         active ? " text-white font-semibold bg-primary" : ""
       }`}
     >
-      <div className="flex items-center ">
-        <link.icon fill={active ? "white" : "none"} className="h-3.5 mr-1" />
-        <span className={cn(poppins.className, active ? "font-bold" : "")}>
+      <div className="flex gap-4  items-center text-[13.9px] ">
+        <div className="h-4 w-4">{link.icon}</div>
+        <span
+          className={cn(
+            poppins.className,
+            active ? "font-bold " : "font-medium",
+            ""
+          )}
+        >
           {link.title}
         </span>
       </div>
