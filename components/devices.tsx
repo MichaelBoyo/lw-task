@@ -5,9 +5,9 @@ import { Card } from "./ui/card";
 export const Devices = () => {
   return (
     <Card className="p-4 border-none">
-      <div className="flex">
+      <div className="flex gap-3">
         <p className="font-bold">Apple Watches & 26 more devices</p>
-        <Button className="bg-[#4AD79B]">
+        <Button size="sm" className="bg-[#4AD79B]">
           View all <ChevronsRight />
         </Button>
       </div>

@@ -49,7 +49,7 @@ const DashBoard = () => {
           <GraphData />
         </div>
         <div className="space-y-4 ">
-          <Card className="bg-black text-white flex flex-col items-center space-y-4 py-6 min-h-[327px]">
+          <Card className="bg-black text-white flex flex-col items-center space-y-4 py-6 min-h-[327px] ">
             <Image src="/Asset 3 1.png" height={149} width={149} alt="spiral" />
 
             <div className=" text-center">
