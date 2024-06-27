@@ -2,7 +2,7 @@ import { SideBar } from "@/components/SideBar";
 import type { Metadata } from "next";
 import "./globals.css";
 import { Lato } from "next/font/google";
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/nav";
 
 const lato = Lato({
   subsets: ["latin"],
