@@ -1,5 +1,5 @@
 import { SidebarLink } from "@/components/SidebarItems";
-import { Cog, User, HomeIcon, LayoutDashboard } from "lucide-react";
+import { FolderGit, LayoutDashboard, PersonStanding } from "lucide-react";
 
 type AdditionalLinks = {
   title: string;
@@ -8,8 +8,8 @@ type AdditionalLinks = {
 
 export const defaultLinks: SidebarLink[] = [
   { href: "/", title: "Dashboard", icon: LayoutDashboard },
-  { href: "/library", title: "Library", icon: User },
-  { href: "/client-mgt", title: "Client Management", icon: Cog },
+  { href: "/library", title: "Library", icon: FolderGit },
+  { href: "/client-mgt", title: "Client Management", icon: PersonStanding },
 ];
 
 export const additionalLinks: AdditionalLinks[] = [];
