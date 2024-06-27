@@ -11,15 +11,9 @@ import { Input } from "@/components/ui/input";
 import { WalkingExercise } from "@/components/walking-exercise";
 import { MAIN_CARDS_DATA, SECONDARY_CARDS_DATA } from "@/constants/dummy.data";
 import {
-  ArrowRight,
   BarChart2,
-  Check,
   ChevronsRight,
   CircleHelp,
-  GanttChartSquare,
-  Info,
-  MessageCircle,
-  Repeat,
   Search,
   Triangle,
   Zap,

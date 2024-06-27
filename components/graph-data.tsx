@@ -26,8 +26,10 @@ export const GraphData = () => {
     <Card className="p-4 space-y-4">
       <div className="flex justify-between">
         <div>
-          <h1 className="text-[#2D2D2D] text-2xl">Clients Performance Graph</h1>
-          <p className="text-[#72777B]">Sleep</p>
+          <h1 className="text-[#2D2D2D] text-2xl font-bold">
+            Clients Performance Graph
+          </h1>
+          <p className="text-[#72777B] font-semibold">Sleep</p>
         </div>
         <div className="flex space-x-2">
           <IconButton icon={Info} />
