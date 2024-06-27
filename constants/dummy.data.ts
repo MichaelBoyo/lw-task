@@ -18,6 +18,7 @@ export const MAIN_CARDS_DATA = [
     rating: "20 kg",
     growth: "37.00%",
     color: "#FFD700",
+    sub: "Vs Previous Month",
   },
 ];
 

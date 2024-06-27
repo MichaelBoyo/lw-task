@@ -8,6 +8,7 @@ import {
   ArrowUp,
   BarChart,
   BarChart2,
+  ChevronsRight,
   CircleHelp,
   GanttChartSquare,
   Info,
@@ -17,6 +18,7 @@ import {
   Zap,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const DashBoard = () => {
   return (
@@ -152,6 +154,15 @@ const SectionOne = () => {
               className="h-full w-1/3 rounded-lg"
             />
           </div>
+          {val.sub ? (
+            <div className="flex justify-between items-center">
+              <p className="text-slate-500">{val.sub}</p>
+              <Link href="/" className="text-[#008EEF] flex">
+                View More
+                <ChevronsRight />
+              </Link>
+            </div>
+          ) : null}
         </Card>
       ))}
     </div>
