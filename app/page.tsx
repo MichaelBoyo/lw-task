@@ -141,7 +141,7 @@ const SectionTwo = () => {
       {SECONDARY_CARDS_DATA.map((val, index) => (
         <Card key={index} className="p-4 space-y-2">
           <div className="flex justify-between">
-            <p className="text-[#72777B] ">{val.title}</p>
+            <p className="text-[#72777B] text-[14px]">{val.title}</p>
             <div
               className=" p-1 rounded-md"
               style={{
@@ -152,10 +152,27 @@ const SectionTwo = () => {
             </div>
           </div>
           <div className="flex items-center space-x-2">
-            <p className="text-xl font-bold">{val.rating}</p>
+            <p className="text-[24.66px] font-bold">{val.rating}</p>
             <div className="text-[9.49px] rounded-lg bg-[#ECFDF5] flex items-center p-1 space-x-1  ">
               <Triangle fill="black" size={6} />
               <p className="text-[#005E36]  font-semibold">{val.growth}</p>
+            </div>
+          </div>
+          <p className="text-[#72777B] text-[13.28px]">{val.subTitle}</p>
+          <div>
+            <div className="flex justify-between">
+              <p className="">0%</p>
+              <p className="">{val.total.value}%</p>
+            </div>
+
+            <div className="bg-slate-200 h-1 rounded-lg">
+              <div
+                style={{
+                  background: val.color,
+                  width: `${val.total.value}%`,
+                }}
+                className="h-full  rounded-lg"
+              />
             </div>
           </div>
 

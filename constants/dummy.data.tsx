@@ -25,10 +25,14 @@ export const MAIN_CARDS_DATA = [
 export const SECONDARY_CARDS_DATA = [
   {
     title: "New Clients",
+    total: {
+      value: 36,
+      color: "green",
+    },
     subTitle: "vs. previous month",
     rating: "20",
     growth: "12.89%",
-    color: "green",
+    color: "#FBC62F",
     icon: User,
     iconOne: <Users color="#805F00" />,
     iconOneColor: "#FEF8E6",
@@ -59,9 +63,13 @@ export const SECONDARY_CARDS_DATA = [
     title: "New Clients",
     subTitle: "vs. previous month",
     rating: "20",
+    total: {
+      value: 78,
+      color: "red",
+    },
     growth: "12.89%",
     iconOne: <BicepsFlexed color="#006980" />,
-    color: "green",
+    color: "#00C7F2",
     icon: User,
     iconOneColor: "#E5FAFF",
     data: [
@@ -91,8 +99,12 @@ export const SECONDARY_CARDS_DATA = [
     title: "New Clients",
     subTitle: "vs. previous month",
     rating: "20",
+    total: {
+      value: 90,
+      color: "orange",
+    },
     growth: "12.89%",
-    color: "#E8E6FE",
+    color: "#695CFB",
     icon: Calendar,
     iconOne: <Calendar color="#0C027D" />,
     iconOneColor: "#E8E6FE",
