@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const WalkingExercise = () => {
   return (
-    <Card className="p-4 ">
+    <Card className="p-4 border-none">
       <div className="flex justify-between">
         <p className="font-bold">Walking Exercise</p>
         <IconButton icon={BarChart2} />

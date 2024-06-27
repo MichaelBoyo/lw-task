@@ -143,7 +143,7 @@ const SectionTwo = () => {
           <div className="flex justify-between">
             <p className="text-[#72777B] text-[14px]">{val.title}</p>
             <div
-              className=" p-1 rounded-md"
+              className="p-2 rounded-md"
               style={{
                 background: val.iconOneColor,
               }}

@@ -1,4 +1,4 @@
-import Navbar2 from "@/components/Navbar2";
+import Navbar from "@/components/Navbar";
 import { SideBar } from "@/components/SideBar";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -27,7 +27,7 @@ export default function RootLayout({
         <div className="flex h-screen">
           <SideBar />
           <main className="flex-1 overflow-y-auto">
-            <Navbar2 />
+            <Navbar />
             <div className="bg-slate-50">{children}</div>
           </main>
         </div>

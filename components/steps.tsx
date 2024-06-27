@@ -4,7 +4,7 @@ import { Card } from "./ui/card";
 
 export const Steps = () => {
   return (
-    <Card className="p-4">
+    <Card className="p-4 border-none">
       <div className="flex justify-between items-center ">
         <p className="font-bold">Steps</p>
         <div className="flex space-x-4">
