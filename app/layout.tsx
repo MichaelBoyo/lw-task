@@ -2,6 +2,14 @@ import Navbar2 from "@/components/Navbar2";
 import { SideBar } from "@/components/SideBar";
 import type { Metadata } from "next";
 import "./globals.css";
+import { Lato } from "next/font/google";
+
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-lato",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={lato.className}>
       <body>
         <div className="flex h-screen">
           <SideBar />

@@ -1,3 +1,4 @@
+import { roboto } from "@/app/fonts";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Bell, ChevronDown, Moon, MoreVertical } from "lucide-react";
 
@@ -11,7 +12,7 @@ export const NavBar = () => {
         </Avatar>
         <ChevronDown />
       </div>
-      <div className="">
+      <div className={roboto.className}>
         <p>Ronald Richards</p>
         <p>Instructor</p>
       </div>

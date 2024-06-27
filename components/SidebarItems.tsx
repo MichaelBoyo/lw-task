@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { LucideIcon } from "lucide-react";
 
 import { defaultLinks } from "@/constants/nav";
+import { poppins } from "@/app/fonts";
+import { cn } from "@/lib/utils";
 
 export interface SidebarLink {
   title: string;
@@ -42,9 +44,9 @@ const SidebarLink = ({
         active ? " text-white font-semibold bg-primary" : ""
       }`}
     >
-      <div className="flex items-center">
+      <div className="flex items-center ">
         <link.icon fill={active ? "white" : ""} className="h-3.5 mr-1" />
-        <span>{link.title}</span>
+        <span className={cn(poppins.className, "font-bold")}>{link.title}</span>
       </div>
     </Link>
   );

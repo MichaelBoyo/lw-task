@@ -2,10 +2,11 @@ import React from "react";
 import { Card } from "./ui/card";
 import { BarChart2 } from "lucide-react";
 import { IconButton } from "./icon-button";
+import Image from "next/image";
 
 export const WalkingExercise = () => {
   return (
-    <Card className="p-4">
+    <Card className="p-4 ">
       <div className="flex justify-between">
         <p className="font-bold">Walking Exercise</p>
         <IconButton icon={BarChart2} />
@@ -17,18 +18,24 @@ export const WalkingExercise = () => {
         </p>
       </div>
 
-      <div className="flex">
-        <p>circle</p>
+      <div className="flex gap-4 pt-6">
+        <Image
+          src="/Chart.svg"
+          alt="Chart"
+          height={130}
+          width={130}
+          quality={100}
+        />
         <div className="space-y-2">
           {data.map((el, idx) => (
             <div key={idx} className="flex items-center gap-2">
               <div
-                className="h-3 w-3 rounded-full"
+                className="h-2 w-2 rounded-full"
                 style={{ background: el.color }}
               />
               <div>
-                <p>{el.name}</p>
-                <p className="font-bold text-xl">{el.value}</p>
+                <p className="text-sm">{el.name}</p>
+                <p className="font-bold text-sm">{el.value}</p>
               </div>
             </div>
           ))}

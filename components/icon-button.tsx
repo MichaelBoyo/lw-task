@@ -4,8 +4,8 @@ import { Button } from "./ui/button";
 
 export const IconButton = (props: { icon: LucideIcon }) => {
   return (
-    <Button size="sm" className="bg-[#F7F8F9]">
-      <props.icon size={16} color="black" />
+    <Button size="sm" className="bg-[#F7F8F9] p-2 h-max">
+      <props.icon size={10} color="black" />
     </Button>
   );
 };

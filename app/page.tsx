@@ -10,6 +10,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { WalkingExercise } from "@/components/walking-exercise";
 import { MAIN_CARDS_DATA, SECONDARY_CARDS_DATA } from "@/constants/dummy.data";
+import { cn } from "@/lib/utils";
 import {
   BarChart2,
   ChevronsRight,
@@ -20,6 +21,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { pacifico } from "./fonts";
 
 const DashBoard = () => {
   return (
@@ -47,25 +49,27 @@ const DashBoard = () => {
           <GraphData />
         </div>
         <div className="space-y-4">
-          <Card className="bg-black text-white flex flex-col items-center space-y-4 py-6">
-            <Image src="/Asset 3 1.png" height={300} width={100} alt="spiral" />
+          <Card className="bg-black text-white flex flex-col items-center space-y-4 py-6 min-h-[327px]">
+            <Image src="/Asset 3 1.png" height={149} width={149} alt="spiral" />
 
             <div className=" text-center">
-              <p>Client Attendance Predictors</p>
-              <p>Here to be of service</p>
+              <p className="font-bold">Client Attendance Predictors</p>
+              <p className="italic">Here to be of service</p>
             </div>
 
-            <p>Coming Soon</p>
+            <p
+              className={cn(
+                pacifico.className,
+                "rounded-full bg-[#75A1FF] p-2 px-4 "
+              )}
+            >
+              Coming Soon
+            </p>
           </Card>
           <ConnectedDevices />
-          <Card className="p-4">
-            <Image
-              src="/apple-watch.png"
-              height={400}
-              width={600}
-              alt="spiral"
-            />
-          </Card>
+
+          <Image src="/apple-watch.png" height={400} width={600} alt="spiral" />
+
           <Devices />
 
           <Steps />

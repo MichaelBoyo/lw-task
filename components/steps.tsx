@@ -1,23 +1,21 @@
-import React from "react";
-import { Card } from "./ui/card";
-import { Info, Repeat } from "lucide-react";
+import { ChevronLeft, ChevronRight, Info } from "lucide-react";
 import { IconButton } from "./icon-button";
+import { Card } from "./ui/card";
 
 export const Steps = () => {
   return (
-    <Card className="">
-      <div className="border-b">
-        <div className="flex justify-between items-center p-4">
-          <p>Steps</p>
-          <div className="flex space-x-4">
-            <IconButton icon={Repeat} />
-            <IconButton icon={Info} />
-          </div>
+    <Card className="p-4">
+      <div className="flex justify-between items-center ">
+        <p className="font-bold">Steps</p>
+        <div className="flex space-x-4">
+          <IconButton icon={ChevronLeft} />
+          <IconButton icon={ChevronRight} />
+          <IconButton icon={Info} />
         </div>
-        <p className="text-sm p-4">
-          27% client data usage was gathered this week
-        </p>
       </div>
+      <p className="text-sm text-[#72777B]">
+        27% client data usage was gathered this week
+      </p>
     </Card>
   );
 };
