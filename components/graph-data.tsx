@@ -14,6 +14,7 @@ import {
 import { IconButton } from "./icon-button";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
+import { useLayoutEffect, useState } from "react";
 
 const formatTime = (num: number) => {
   if (num === 0) {
@@ -23,6 +24,19 @@ const formatTime = (num: number) => {
 };
 
 export const GraphData = () => {
+  const [innweWidth, setInnerWidth] = useState(0);
+
+  const onResize = () => {
+    setInnerWidth(window.innerWidth);
+  };
+  useLayoutEffect(() => {
+    onResize();
+  }, []);
+  useLayoutEffect(() => {
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
   return (
     <Card className="p-4 space-y-4">
       <div className="flex justify-between">
@@ -62,7 +76,7 @@ export const GraphData = () => {
       </div>
       <div className="min-w-full">
         <AreaChart
-          width={window.innerWidth - 650}
+          width={innweWidth - 650}
           height={410}
           data={CHART_DATA}
           className=""
