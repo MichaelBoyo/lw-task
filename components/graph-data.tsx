@@ -8,6 +8,16 @@ import { cn } from "@/lib/utils";
 import { IconButton } from "./icon-button";
 import { CHART_DATA } from "@/constants/chart.data";
 
+import { LineChart, Line, Tooltip, Legend } from "recharts";
+
+const data = [
+  { time: "10:00", value: 30 },
+  { time: "10:30", value: 50 },
+  { time: "11:00", value: 45 },
+  { time: "11:30", value: 60 },
+  { time: "12:00", value: 80 },
+];
+
 const generateRandomValue = () => Math.floor(Math.random() * 25);
 
 export const GraphData = () => {
@@ -17,6 +27,8 @@ export const GraphData = () => {
     item.y = generateRandomValue();
     item.z = generateRandomValue();
   });
+
+  console.log(CHART_DATA);
   return (
     <Card className="p-4 space-y-4">
       <div className="flex justify-between">
@@ -61,16 +73,28 @@ export const GraphData = () => {
           data={CHART_DATA}
           className=""
         >
-          <CartesianGrid />
+          <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name">
             <Label value="Label" offset={-5} position="insideBottom" />
           </XAxis>
 
           <YAxis
             label={{ value: "Label", angle: -90, position: "insideLeft" }}
-            // tick={({ w, x, y, z, payload }) => {
-            //   return payload.value;
+            // // tick={({ w, x, y, z, payload }) => {
+            // //   return payload.value;
+            // // }}
+            // // display 6 levels
+
+            // values="s"
+            // tickCount={6}
+            // // add am or pm to the values displayed
+            // tickFormatter={(value) => {
+            //   return `${value} ${value > 12 ? "pm" : "am"}`;
             // }}
+            // domain={[10, 12]}
+
+            // make 24 the amxiimum numbver
+            domain={[0, 24]}
           />
 
           <Area
@@ -104,6 +128,7 @@ export const GraphData = () => {
             fill={chartsKeys[0].color}
             stroke="#FBC62F"
           />
+          <Tooltip />
         </AreaChart>
       </div>
     </Card>
