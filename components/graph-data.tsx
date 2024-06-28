@@ -24,7 +24,7 @@ const formatTime = (num: number) => {
 };
 
 export const GraphData = () => {
-  const [innweWidth, setInnerWidth] = useState(0);
+  const [innerWidth, setInnerWidth] = useState(0);
 
   const onResize = () => {
     setInnerWidth(window.innerWidth);
@@ -76,7 +76,7 @@ export const GraphData = () => {
       </div>
       <div className="min-w-full">
         <AreaChart
-          width={innerWidth > 0 ? innweWidth - 650 : 1000}
+          width={innerWidth > 0 ? innerWidth - 650 : 1000}
           height={410}
           data={CHART_DATA}
           className=""
