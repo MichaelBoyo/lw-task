@@ -25,7 +25,7 @@ import { pacifico } from "./fonts";
 
 const DashBoard = () => {
   return (
-    <div className="space-y-4 p-4">
+    <div className="space-y-1 p-4 py-6">
       <div className="bg-white flex justify-between items-center p-4">
         <div>
           <p className="font-bold text-[16px]">Good Evening</p>
@@ -43,7 +43,7 @@ const DashBoard = () => {
         </div>
       </div>
       <div className="flex gap-4">
-        <div className=" space-y-4">
+        <div className=" space-y-2">
           <SectionOne />
           <SectionTwo />
           <GraphData />
@@ -90,7 +90,7 @@ export default DashBoard;
 
 const SectionOne = () => {
   return (
-    <div className="grid grid-cols-3 gap-3">
+    <div className="grid grid-cols-3 gap-2">
       {MAIN_CARDS_DATA.map((val, index) => (
         <Card key={index} className="p-4 space-y-1">
           <IconButton icon={Zap} />
@@ -146,7 +146,7 @@ const SectionOne = () => {
 
 const SectionTwo = () => {
   return (
-    <div className="grid grid-cols-3 gap-3">
+    <div className="grid grid-cols-3 gap-2">
       {SECONDARY_CARDS_DATA.map((val, index) => (
         <Card key={index} className="p-4 ">
           <div className="flex justify-between">

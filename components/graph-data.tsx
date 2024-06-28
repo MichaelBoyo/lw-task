@@ -1,34 +1,28 @@
 "use client";
-import React from "react";
-import { Card } from "./ui/card";
-import { Info, MoreVertical, Repeat } from "lucide-react";
-import { Button } from "./ui/button";
-import { AreaChart, Area, CartesianGrid, XAxis, YAxis, Label } from "recharts";
-import { cn } from "@/lib/utils";
-import { IconButton } from "./icon-button";
 import { CHART_DATA } from "@/constants/chart.data";
+import { cn } from "@/lib/utils";
+import { Info, MoreVertical, Repeat } from "lucide-react";
+import {
+  Area,
+  AreaChart,
+  CartesianGrid,
+  Label,
+  XAxis,
+  YAxis,
+  Tooltip,
+} from "recharts";
+import { IconButton } from "./icon-button";
+import { Button } from "./ui/button";
+import { Card } from "./ui/card";
 
-import { LineChart, Line, Tooltip, Legend } from "recharts";
-
-const data = [
-  { time: "10:00", value: 30 },
-  { time: "10:30", value: 50 },
-  { time: "11:00", value: 45 },
-  { time: "11:30", value: 60 },
-  { time: "12:00", value: 80 },
-];
-
-const generateRandomValue = () => Math.floor(Math.random() * 25);
+const formatTime = (num: number) => {
+  if (num === 0) {
+    return "0";
+  }
+  return num > 12 ? `${num}:00` : `${num}:00`;
+};
 
 export const GraphData = () => {
-  CHART_DATA.forEach((item) => {
-    item.w = generateRandomValue();
-    item.x = generateRandomValue();
-    item.y = generateRandomValue();
-    item.z = generateRandomValue();
-  });
-
-  console.log(CHART_DATA);
   return (
     <Card className="p-4 space-y-4">
       <div className="flex justify-between">
@@ -75,26 +69,13 @@ export const GraphData = () => {
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name">
-            <Label value="Label" offset={-5} position="insideBottom" />
+            <Label value="Month" offset={-5} position="insideBottom" />
           </XAxis>
 
           <YAxis
-            label={{ value: "Label", angle: -90, position: "insideLeft" }}
-            // // tick={({ w, x, y, z, payload }) => {
-            // //   return payload.value;
-            // // }}
-            // // display 6 levels
-
-            // values="s"
-            // tickCount={6}
-            // // add am or pm to the values displayed
-            // tickFormatter={(value) => {
-            //   return `${value} ${value > 12 ? "pm" : "am"}`;
-            // }}
-            // domain={[10, 12]}
-
-            // make 24 the amxiimum numbver
-            domain={[0, 24]}
+            label={{ value: "Time", angle: -90, position: "insideLeft" }}
+            tickFormatter={formatTime}
+            tickCount={6}
           />
 
           <Area
@@ -116,7 +97,6 @@ export const GraphData = () => {
             dataKey="z"
             stackId="2"
             stroke="blue"
-            // fill="#0E669D"
             fill={chartsKeys[2].color}
           />
 
@@ -135,7 +115,7 @@ export const GraphData = () => {
   );
 };
 
-const tabs = ["Sleep", "Steps", "Weight", "Termerature"];
+const tabs = ["Sleep", "Steps", "Weight", "Temperature"];
 
 const chartsKeys = [
   {

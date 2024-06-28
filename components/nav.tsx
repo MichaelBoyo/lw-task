@@ -4,7 +4,13 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Bell, ChevronDown, Moon, MoreVertical } from "lucide-react";
+import {
+  Bell,
+  ChevronDown,
+  ChevronLeft,
+  Moon,
+  MoreVertical,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
@@ -49,13 +55,13 @@ export const Navbar = () => {
           </div>
         ) : null}
       </div>
-      <div className="hidden md:flex justify-end items-center space-x-6 p-4 px-6 border-b">
-        <div className="flex items-center">
+      <div className="hidden md:flex justify-end  items-center space-x-6 p-4 px-6 border-b">
+        <div className="flex  items-end ">
           <Avatar>
             <AvatarImage src="/nav_user.png" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <ChevronDown />
+          <ChevronDown color="#747474" />
         </div>
         <div className={roboto.className}>
           <p className="font-bold leading-[14px]">Ronald Richards</p>
