@@ -6,7 +6,7 @@ import { Navbar } from "@/components/nav";
 
 const lato = Lato({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["100", "300", "400", "700", "900"],
   display: "swap",
   variable: "--font-lato",
 });

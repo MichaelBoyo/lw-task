@@ -36,7 +36,7 @@ const DashBoard = () => {
             <Search className="absolute top-[13px] left-2" size={14} />
             <Input
               placeholder="Search for clients & classes"
-              className="pl-8"
+              className="pl-8 min-w-[248.93px]"
             />
           </div>
           <CircleHelp size={20} />
@@ -90,10 +90,10 @@ const SectionOne = () => {
           <IconButton icon={Zap} />
           <div className="flex justify-between">
             <div className="">
-              <p className="text-slate-500 text-sm">{val.title}</p>
+              <p className="text-slate-500 text-[12px]">{val.title}</p>
               <div className="flex items-center space-x-2">
-                <p className="text-xl font-bold">{val.rating}</p>
-                <div className="text-[6.95px] rounded-lg bg-[#D2FFE6] flex items-center p-1 space-x-1  ">
+                <p className="text-[18.06px] font-extrabold">{val.rating}</p>
+                <div className="text-[6.95px] rounded-lg bg-[#D2FFE6] flex items-center p-1 px-2  space-x-1  ">
                   <Triangle fill="black" size={4} />
                   <p className="text-[#005E36]  font-semibold">{val.growth}</p>
                 </div>
@@ -109,7 +109,7 @@ const SectionOne = () => {
             </Button>
           </div>
           <div>
-            <p className=" text-right">40%</p>
+            <p className=" text-right text-[10px]">40%</p>
 
             <div className="bg-slate-200 h-1 rounded-lg">
               <div
@@ -121,11 +121,14 @@ const SectionOne = () => {
             </div>
           </div>
           {val.sub ? (
-            <div className="flex justify-between items-center">
-              <p className="text-slate-500">{val.sub}</p>
-              <Link href="/" className="text-[#008EEF] flex">
+            <div className="flex justify-between text-[9px] items-center">
+              <p className="text-slate-500 ">{val.sub}</p>
+              <Link
+                href="/"
+                className="text-[#008EEF] flex items-center font-semibold"
+              >
                 View More
-                <ChevronsRight />
+                <ChevronsRight size={10} />
               </Link>
             </div>
           ) : null}
@@ -153,14 +156,14 @@ const SectionTwo = () => {
           </div>
           <div className="flex items-center space-x-2">
             <p className="text-[24.66px] font-bold">{val.rating}</p>
-            <div className="text-[9.49px] rounded-lg bg-[#ECFDF5] flex items-center p-1 space-x-1  ">
+            <div className="text-[9.49px] rounded-lg bg-[#ECFDF5] flex items-center p-1 px-2 space-x-1  ">
               <Triangle fill="black" size={6} />
               <p className="text-[#005E36]  font-semibold">{val.growth}</p>
             </div>
           </div>
           <p className="text-[#72777B] text-[13.28px]">{val.subTitle}</p>
-          <div>
-            <div className="flex justify-between">
+          <div className="py-2 text-[#2D2D2D]">
+            <div className="flex justify-between text-[11.88px]">
               <p className="">0%</p>
               <p className="">{val.total.value}%</p>
             </div>
@@ -180,18 +183,18 @@ const SectionTwo = () => {
             {val.data.map((subData, id) => (
               <Card
                 key={id}
-                className="flex justify-between p-3 border-none bg-[#F8F7FF] items-center rounded-lg"
+                className="flex justify-between p-2 border-none bg-[#F8F7FF] items-center rounded-lg"
               >
-                <div className="flex space-x-10">
+                <div className="flex space-x-4 items-center">
                   <Avatar>
-                    <AvatarImage src="/nav_user.png" alt="@shadcn" />
+                    <AvatarImage src={subData.image} alt="@shadcn" />
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
                   <div>
-                    <p className="font-semibold text-[#494949] text-[8.6px]">
+                    <p className="font-semibold text-[#494949] text-xs">
                       {subData.name}
                     </p>
-                    <p className="text-[#757575] text-xs">{subData.time}</p>
+                    <p className="text-[#757575] text-[10px]">{subData.time}</p>
                   </div>
                 </div>
                 {val.type === "icon" ? (
@@ -203,8 +206,10 @@ const SectionTwo = () => {
                     quality={100}
                   />
                 ) : val.type === "text" ? (
-                  <div className="p-1 px-2 bg-[#D2FFE6] rounded-md">
-                    <p className="text-[#005E36] text-xs">View class</p>
+                  <div className="p-1 px-2 bg-[#D2FFE6] rounded-sm">
+                    <p className="text-[#005E36] text-[10px] font-medium leading-[10px]">
+                      View class
+                    </p>
                   </div>
                 ) : (
                   <Checkbox

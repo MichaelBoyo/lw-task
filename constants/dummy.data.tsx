@@ -42,22 +42,22 @@ export const SECONDARY_CARDS_DATA = [
     data: [
       {
         name: "Guy Hawkins",
-        image: "/hello.png",
+        image: "/images/person_1.svg",
         time: "22 minutes ago",
       },
       {
         name: "Asta Majid",
-        image: "/hello.png",
+        image: "/images/person_2.svg",
         time: "22 minutes ago",
       },
       {
         name: "Robert Fox",
-        image: "/hello.png",
+        image: "/images/person_3.svg",
         time: "22 minutes ago",
       },
       {
         name: "Annette Black",
-        image: "/hello.png",
+        image: "/images/person_4.svg",
         time: "22 minutes ago",
       },
     ],
@@ -79,22 +79,22 @@ export const SECONDARY_CARDS_DATA = [
     data: [
       {
         name: "Yoga Class",
-        image: "/hello.png",
+        image: "/images/yoga.svg",
         time: "60 minutes class",
       },
       {
         name: "Pilates Class",
-        image: "/hello.png",
+        image: "/images/pilates.svg",
         time: "60 minutes class",
       },
       {
         name: "Cycle Class",
-        image: "/hello.png",
+        image: "/images/cycle.svg",
         time: "60 minutes class",
       },
       {
         name: "Cardio Class",
-        image: "/hello.png",
+        image: "/images/cardio.svg",
         time: "60 minutes class",
       },
     ],
@@ -115,22 +115,22 @@ export const SECONDARY_CARDS_DATA = [
     data: [
       {
         name: "Guy Hawkins",
-        image: "/hello.png",
+        image: "/images/person_1.svg",
         time: "22 minutes ago",
       },
       {
         name: "Asta Majid",
-        image: "/hello.png",
+        image: "/images/person_2.svg",
         time: "22 minutes ago",
       },
       {
         name: "Robert Fox",
-        image: "/hello.png",
+        image: "/images/person_3.svg",
         time: "22 minutes ago",
       },
       {
         name: "Annette Black",
-        image: "/hello.png",
+        image: "/images/person_4.svg",
         time: "22 minutes ago",
       },
     ],
