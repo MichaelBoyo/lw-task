@@ -50,7 +50,13 @@ const DashBoard = () => {
         </div>
         <div className="space-y-4 ">
           <Card className="bg-black text-white flex flex-col items-center space-y-4 py-6 min-h-[327px] ">
-            <Image src="/Asset 3 1.png" height={149} width={149} alt="spiral" />
+            <Image
+              src="/Asset 3 1.png"
+              height={149}
+              width={149}
+              alt="spiral"
+              className="animate-wiggle"
+            />
 
             <div className=" text-center">
               <p className="font-bold">Client Attendance Predictors</p>
