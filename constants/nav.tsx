@@ -1,5 +1,5 @@
 import { SidebarLink } from "@/components/SidebarItems";
-import { ClientMgtIcon } from "@/components/icons/ClientMgtICon";
+import { ClientMgtIcon } from "@/components/icons/client-mgt-icon";
 import { DashBoardIcon } from "@/components/icons/dashboard";
 import { Library } from "@/components/icons/library";
 
