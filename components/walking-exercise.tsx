@@ -8,12 +8,12 @@ export const WalkingExercise = () => {
   return (
     <Card className="p-4 border-none">
       <div className="flex justify-between">
-        <p className="font-bold">Walking Exercise</p>
+        <p className="font-bold text-[12.96px]">Walking Exercise</p>
         <IconButton icon={BarChart2} />
       </div>
       <div>
-        <p className="font-bold text-xl">100,00,622 Steps</p>
-        <p className="text-[#72777B] text-sm">
+        <p className="font-bold text-[15.31px]">100,00,622 Steps</p>
+        <p className="text-[#72777B] text-[9.42px]">
           Keep pushing them to reach their goals!
         </p>
       </div>
@@ -34,8 +34,8 @@ export const WalkingExercise = () => {
                 style={{ background: el.color }}
               />
               <div>
-                <p className="text-sm">{el.name}</p>
-                <p className="font-bold text-sm">{el.value}</p>
+                <p className="text-[7.07px]">{el.name}</p>
+                <p className="font-bold text-[9.42px]">{el.value}</p>
               </div>
             </div>
           ))}

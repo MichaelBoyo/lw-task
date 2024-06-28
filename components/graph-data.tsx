@@ -40,7 +40,7 @@ export const GraphData = () => {
   return (
     <Card className="p-4 space-y-4">
       <div className="flex justify-between">
-        <div>
+        <div className="space-y-2">
           <h1 className="text-[#2D2D2D] text-2xl font-bold">
             Clients Performance Graph
           </h1>
@@ -56,7 +56,9 @@ export const GraphData = () => {
       <div className="grid grid-cols-4 gap-2">
         {tabs.map((tab, i) => (
           <Button
-            className={cn(tab === "Sleep" ? "bg-[#323A46]" : "bg-[#E7EAEE]")}
+            className={cn(
+              tab === "Sleep" ? "bg-[#323A46]" : "bg-[#E7EAEE] text-gray-300"
+            )}
             key={i}
           >
             {tab}
@@ -70,18 +72,21 @@ export const GraphData = () => {
               style={{ background: key.color }}
               className="h-4 w-4 rounded-full"
             />
-            <h1>{key.name}</h1>
+            <h1 className="text-xs">{key.name}</h1>
           </div>
         ))}
       </div>
       <div className="min-w-full">
         <AreaChart
           width={innerWidth > 0 ? innerWidth - 650 : 900}
-          height={410}
+          height={300}
           data={CHART_DATA}
           className=""
+          style={{
+            fontSize: "12px",
+          }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid />
           <XAxis dataKey="name">
             <Label value="Month" offset={-5} position="insideBottom" />
           </XAxis>
