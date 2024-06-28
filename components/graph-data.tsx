@@ -76,7 +76,7 @@ export const GraphData = () => {
       </div>
       <div className="min-w-full">
         <AreaChart
-          width={innerWidth > 0 ? innerWidth - 650 : 1000}
+          width={innerWidth > 0 ? innerWidth - 650 : 900}
           height={410}
           data={CHART_DATA}
           className=""
